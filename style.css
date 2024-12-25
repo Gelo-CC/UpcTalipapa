@@ -157,21 +157,6 @@ h4 {
   box-shadow: 5px 5px 5px black;
 }
 
-h5 {
-  font-family: "Yeseva One", serif;
-  font-weight: 400;
-  font-size: 3.5vh;
-  color: #384959;
-  text-align: left;
-  margin: 0;
-  padding: 0 10px;
-  font-style:bold;
-}
-
-h5 {
-  color: #274C77;
-}
-
 h6 {
   text-align: center;
 }
