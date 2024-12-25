@@ -33,7 +33,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
- 
+  margin-right: 200px;
 }
 
 h1, h2 {
@@ -56,13 +56,13 @@ color: white;
 }
 
 h1 {
-  margin-left: 50px;
+  margin-right: 400px;
   position: relative;
   z-index: 1;
 }
 
 h2 {
-  margin-left: 30px;
+  margin-left: 150px;
   margin-top: 10px;
   position: relative;
   z-index: 1;
@@ -215,7 +215,7 @@ h6 {
 .facebook-button {
   background-color: #ffffff; 
   color: rgb(35, 86, 255);
-  margin-left: px;
+  margin-left: 140px;
 }
 
 
@@ -228,21 +228,3 @@ h6 {
   color:green;
 }
 
-@media (max-width: 768px) {
-  .upperpart {
-    height: 250px;
-  }
-
-  h1, h2 {
-    font-size: 28px;
-  }
-
-  .container1, .container3, .container5 {
-    flex-direction: column;
-  }
-
-  button {
-    width: 180px;
-    font-size: 12px;
-  }
-}
