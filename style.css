@@ -56,7 +56,7 @@ color: white;
 }
 
 h1 {
-  margin-right: 400px;
+  margin-left:170px;
   position: relative;
   z-index: 1;
 }
@@ -215,7 +215,7 @@ h6 {
 .facebook-button {
   background-color: #ffffff; 
   color: rgb(35, 86, 255);
-  margin-left: 140px;
+  margin-left: 100px;
 }
 
 
