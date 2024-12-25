@@ -3,16 +3,26 @@ body {
   font-family: 'Playfair Display', 'Garamond', 'Baskerville', serif;
   justify-content: center;
   align-items: center;
-  perspective: 1500px; 
+  perspective: 1500px;
   width: 100%;
   background-image: url('pictures/image3.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100%;
+  min-height: 100vh; /* Use viewport height for proper scaling */
   display: flex;
   flex-direction: column;
 }
+
+/* Media Query for Phones */
+@media (max-width: 768px) {
+  body {
+    background-size: contain; /* Adjust background scaling for smaller screens */
+    perspective: 1000px; /* Reduce perspective for smaller devices */
+    padding: 10px; /* Add padding for better spacing */
+  }
+}
+
 
 .upperpart {
   z-index: 9999;
