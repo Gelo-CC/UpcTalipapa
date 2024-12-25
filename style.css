@@ -228,3 +228,21 @@ h6 {
   color:green;
 }
 
+@media (max-width: 768px) {
+  .upperpart {
+    height: 250px;
+  }
+
+  h1, h2 {
+    font-size: 28px;
+  }
+
+  .container1, .container3, .container5 {
+    flex-direction: column;
+  }
+
+  button {
+    width: 180px;
+    font-size: 12px;
+  }
+}
