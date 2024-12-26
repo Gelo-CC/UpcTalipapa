@@ -1,74 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-      html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
 
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Playfair Display', 'Garamond', 'Baskerville', serif;
-    perspective: 1500px;
-    background-image: url('pictures/image1.png');
-    background-size: cover; /* Ensure image covers the entire screen */
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-}
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Playfair Display', 'Garamond', 'Baskerville', serif;
+            perspective: 1500px;
+            background-image: linear-gradient(rgba(255, 254, 254, 0.5), rgb(26, 26, 26)), url('pictures/image1.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            height: 100%;
+            animation: backgroundShift 8s infinite;
+        }
 
-/* Media Query for Phones */
-@media (max-width: 768px) {
-    body {
-        background-size: contain; /* Scale background image to fit without cropping */
-        padding: 20px; /* Add padding for better spacing */
-    }
-}
-
+        @keyframes backgroundShift {
+            0% { background-position: center; }
+            50% { background-position: top right; }
+            100% { background-position: center; }
+        }
 
         .button {
-            background-color: rgb(173, 220, 80);
+            background-color: rgba(112, 255, 2, 0.43);
             font-family: Arial, sans-serif;
-            font-size: 5vw; 
-            color: rgb(4, 123, 26);
+            font-size: 5vw;
+            color: rgb(0, 7, 2);
             text-decoration: none;
             margin-top: 20px;
-            padding: 10px 20px;
+            padding: 15px 25px;
             border-radius: 10px;
+            border: 2px solid rgba(0, 7, 2, 0.8);
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: all 0.5s ease; 
+            transition: transform 0.3s ease, background-color 0.5s ease, color 0.5s ease;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
         }
 
         .button:hover {
             background-color: rgb(3, 109, 38);
             color: white;
-            opacity: 0.8;
+            transform: scale(1.1);
         }
 
-       
+        .button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            z-index: -1;
+            transform: skewX(-45deg);
+            transition: left 0.5s ease;
+        }
+
+        .button:hover::before {
+            left: 100%;
+        }
+
+        .button:active {
+            transform: scale(0.95);
+        }
+
         @media (max-width: 600px) {
             .button {
-                font-size: 6vw; 
-                width: auto; 
-                padding: 10px 15px; 
+                font-size: 6vw;
+                width: auto;
+                padding: 10px 15px;
             }
 
             body {
-                padding: 10px; 
+                padding: 10px;
             }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
         }
     </style>
 </head>
 <body>
+ 
     <a href="start.html" class="button start-button"><b>Click This!!!</b></a>
 </body>
 </html>
